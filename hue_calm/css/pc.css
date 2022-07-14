@@ -1,0 +1,226 @@
+@charset "utf-8";
+:root{
+    --batang: 'Gowun Batang', serif;
+    --mon: 'Montserrat', sans-serif;
+}
+
+/* header */
+header{
+    display: block;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+header #logo{
+    margin-bottom: 40px;
+}
+header #register{
+    display: flex;
+    float: right;
+}
+header #register li{
+    margin-right: 30px;
+}
+header #pc_menu{
+    display: flex;
+}
+header #pc_menu li{
+    margin-right: 25px;
+}
+header ul li a{
+    font-family: var(--mon);
+    font-size: 16;
+    font-weight: 600;
+    color: #777;
+    text-transform: uppercase;
+}
+header a #menu{
+    display: none;
+}
+header ul li:hover a{
+    color: #000;
+}
+
+/* section 1 top*/
+main #top{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 0 100px 0;
+    margin-bottom: 320px;
+}
+main #top #top_img{
+    background: url(../logo_icon/3.jpg) no-repeat 100% / cover;
+    width: 60%;
+    height: 70vh;
+    margin: 0;
+    margin-top: 85px;
+    margin-bottom: 0;
+    margin-right: 70px;
+    position: relative;
+}
+main #top #top_img a{
+    background-color: rgba(0, 0, 0, 40%);
+    display: block;
+    width: 45px;
+    height: 45px;
+    display: grid;
+    place-items: center;
+    position: absolute;
+}
+main #top #top_img .left{
+    top: 50%;
+    transform: translateY(-50%);
+}
+main #top #top_img .right{
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+main #top p{
+    width:calc(40% - 70px);
+    text-align: left;
+    margin-top: 85px;
+}
+main #top .view_more{
+    position: absolute;    
+    top: 85%;
+    left: 63.4%;
+}
+
+/* section 2 sun */
+main #sun{
+    background-color: white;
+    padding-bottom: 45px;
+    margin-top: 0;
+    padding-top: 0;
+}
+main #sun .sun_gray{
+    padding: 0 100px 0;
+}main #sun .sun_container .sun_wrapper .sun_txt .price_origin{
+    display: none;
+}
+main #sun .sun_container .sun_wrapper .sun_txt .product_name{
+    margin-bottom: 54px;
+}
+main #sun .sun_txt{
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 8%;
+}
+main #sun .sun_container .sun_wrapper{
+    position: relative;
+}
+main #sun .sun_container .sun_wrapper img{
+    margin-bottom: 0;
+}
+main #sun .sun_container .sun_wrapper:hover .sun_txt{
+    display: block;
+}
+main #sun .sun_container .sun_wrapper:hover img{
+    filter: contrast(20%);
+}
+main #sun .sun_container .sun_wrapper:hover .sun_txt p{
+    color: #fff;
+}
+/* section 3 product */
+main #product{
+    font-family: var(--mon);
+    padding: 0 100px 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 320px;
+    margin-bottom: 160px;
+}
+main #product .product_mobile{
+    display: block;
+}
+main #product .product_wrapper{
+    margin: 0;
+    margin-right: 40px;
+    margin-left: 40px;
+    width: calc(33.33% - 80px);
+}
+
+main #product .product_wrapper:first-child,
+main #product .product_wrapper:nth-child(3){
+    margin-right: 40px;
+    margin-left: 40px;
+    width: calc(33.33% - 80px);
+}
+main #product .product_wrapper:nth-child(2),
+main #product .product_wrapper:nth-child(4){
+    margin-left: 40px;
+    margin-right: 40px;
+    width: calc(33.33% - 80px);
+}
+main #product .view_more_mb{
+    display: none;
+}
+main #product .product_wrapper .product_txt .product_name{
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  main #product .product_wrapper .product_txt .product_gray{
+      font-size: 16px;
+  }
+  main #product .price_origin{
+    font-size: 14px;
+  }
+  main #product .price{
+    font-size: 18px;
+}
+
+/* seciont 4 set */
+main #set{
+    margin: 0;
+    margin-bottom: 160px;
+}
+main #set .set_container{
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+}
+main #set .set_container .left,
+main #set .set_container .right{
+    background-color: rgba(0, 0, 0, 40%);
+    display: block;
+    width: 45px;
+    height: 45px;
+    display: grid;
+    place-items: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+main #set .set_container .right{
+    top: 50%;
+    right: 50%;
+    transform: translateY(-50%);
+}
+main #set .set_container img{
+    width: 50%;
+    max-height: 757px;
+}
+main #set .set_container .set_flex_item{
+    width: 50%;
+    padding: 0;
+    justify-content: center;
+}
+
+
+/* footer */
+footer{
+    padding-left: 0;
+    margin-left: 100px;
+    margin-bottom: 160px;
+    position: relative;
+}
+footer .copy{
+    position: absolute;
+    right: 100px;
+    bottom: -50px;
+}
+footer .footer_container a:hover{
+    color: #000;
+}
