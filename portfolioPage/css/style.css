@@ -1,0 +1,231 @@
+@charset "utf-8";
+p, h1, h2, h3, h4, ul{
+    margin: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'LeferiPoint-WhiteA', sans-serif;
+    padding: 6.25rem;
+    margin: 0;
+    transition: .5s;
+}
+a{
+    text-decoration: none;
+    color: #000;
+}
+.font-black{
+    font-family: 'LeferiPoint-BlackA', sans-serif;
+}
+.upper{
+    text-transform: uppercase;
+}
+/* header */
+header{
+    position: fixed;
+    height: calc(100vh - 6.25rem);
+}
+header h1{
+    margin-bottom: 1.875rem;
+}
+header h1 a{
+    color: inherit;
+    font-size: 3.125rem;
+} 
+header p{
+    font-size: 1.25rem;
+    margin-bottom: 1.25rem;
+}
+header>a{
+    font-size: 1.563rem;
+    display: flex;
+    align-items: center;
+}
+header>a::before{
+    content: '';
+    width: 15px;
+    height: 1px;
+    background-color: #000;
+    display: block;
+    margin-right: 10px;
+}
+/* dark mode contact a before line */
+.on::before{
+    background-color: #fff;
+}
+header #blog{
+    position: absolute;
+    list-style: none;
+    bottom: 6.25rem;
+    padding: 0;
+    align-items: center;
+    display: flex;
+}
+header #blog li{
+    margin-right: 30px;
+}
+header #blog li:first-child a img{
+    width: 27.8px;
+}
+header #blog li:nth-child(2) a img{
+    width: 28px;
+}
+header #blog li:last-child a img{
+    width: 32px;
+}
+
+/* main 1*/
+main{
+    margin-left: 38.75rem;
+}
+main .main1{
+    height: 100vh;
+    position: relative;
+    height: calc(100vh - 6.25rem);
+    margin-bottom: calc(12.5rem - 6.25rem);
+}
+main .main1 .color-mode{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 5.9rem;
+}
+main .main1 .color-mode a:first-child{
+    margin-right: 30px;
+}
+main .main1 .color-mode a:first-child img{
+    width: 31px;
+}
+main .main1 .color-mode a:last-child img{
+    width: 30px;
+} 
+
+main .main1 #main1-container{
+    list-style: none;
+    padding: 0;
+    text-align: right;
+    position: absolute;
+    bottom: 5rem;
+    right:0;
+    -webkit-text-stroke: 2px #000;
+    -webkit-text-fill-color: transparent;
+}
+main .main1 #main1-container li a{
+    display: block;
+    font-size: 6.25rem;
+}
+main .main1 #main1-container li:first-child,
+main .main1 #main1-container :nth-child(2){
+    margin-bottom: 1rem;
+}
+
+/* main2 */
+main .main2 h2{
+    margin-bottom: 5rem;
+    padding-top: 6.25rem;
+}
+main .main2 .title{
+    font-size: 1.563rem;
+}
+main .main2 .main2-box1 h3{
+    font-size: 2.813rem;
+    -webkit-text-stroke: 1px #000;
+    color: transparent;
+    margin-bottom: 1.875rem;
+}
+main .main2 .main2-box1 p{
+    margin-bottom: 7.5rem;
+}
+main .main2 .main2-box2 p,
+main .main2 .main2-box3 p{
+    margin-bottom: 4.375rem;
+}
+main .main2 .main2-box4 p{
+    margin-bottom: 12.5rem;
+}
+main .main2 h4{
+    margin-bottom: 1.25rem;
+}
+/* main3 */
+main .main3 h2{
+    margin-bottom: 5rem;
+}
+main .main3 p{
+    line-height: 2;
+}
+main .main3 h2{
+    font-size: 1.563rem;
+    padding-top: 6.25rem;
+}
+main .main3 h4,
+main .main3 strong{
+    font-size: 2.813rem;
+}
+main .main3 h4{
+    margin-bottom: 2.188rem;
+}
+main .main3 strong{
+    display: block;
+    -webkit-text-stroke: 1px #000;
+    color: transparent;
+    margin-bottom: 0.313rem;
+}
+main .main3 .main3-box1 p{
+    margin-bottom: 4.375rem;
+}
+main .main3 .main3-container{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+main .main3 .design1 strong:nth-child(4){
+    margin-bottom: 1.25rem;
+}
+main .main3 .main3-box3 strong:last-child{
+    margin-bottom: 18.75rem;
+}
+main .main3 .main3-box3 h4{
+    text-transform: uppercase;
+}
+main .main3 .publishing2 strong,
+main .main3 .publishing3 strong{
+    margin-top: 4.375rem;
+}
+/* footer */
+footer{
+    margin-left: 38.75rem;
+}
+footer h2{
+    margin-bottom: 6.25rem;
+    font-size: 3.75rem;
+}
+footer .info-box{
+    display: flex;
+    align-items: center;
+}
+footer .info-box .info{
+    margin-left: 7.5rem;
+}
+footer .contact p{
+    margin-bottom: 25px;
+    font-size: 1.875rem;
+}
+footer .contact p:last-child{
+    margin-bottom: 0;
+}
+footer > p {
+    margin-top: 12.375rem;
+    float: right;
+    margin-bottom: 6.25rem;
+}
+
+/* dark mode active */
+body.active{
+    background-color: #000;
+    color: #fff;
+}
+body.active a{
+    color: #fff;
+}
+
