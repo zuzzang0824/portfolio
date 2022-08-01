@@ -4,22 +4,34 @@ p, h1, h2, h3, h4, ul{
 }
 html{
     scroll-behavior: smooth;
+    /* cursor: none; */
 }
 body{
     font-family: 'LeferiPoint-WhiteA', sans-serif;
     padding: 6.25rem;
     margin: 0;
+    position: relative;
+    background-color: #eee;
+    /* background: linear-gradient(90deg, hsl(var(--grad-start), 0%, 100%), hsl(var(--grad-end), 20%, 89%)); */
     transition: .5s;
 }
 a{
     text-decoration: none;
-    color: #000;
+    color: #000
 }
 .font-black{
     font-family: 'LeferiPoint-BlackA', sans-serif;
 }
 .upper{
     text-transform: uppercase;
+}
+/* mouse move */ 
+.circle{
+    background-color: transparent;
+    width: 0rem; height: 0rem;
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: 0  0 11rem 5rem rgb(140, 196, 255) ;
 }
 /* header */
 header{
@@ -78,6 +90,8 @@ header #blog li:last-child a img{
 /* main 1*/
 main{
     margin-left: 38.75rem;
+    position: relative;
+    z-index: 999;
 }
 main .main1{
     height: 100vh;
@@ -92,14 +106,25 @@ main .main1 .color-mode{
     margin-bottom: 5.9rem;
 }
 main .main1 .color-mode a:first-child{
-    margin-right: 30px;
+    margin-right: 16px;
 }
 main .main1 .color-mode a:first-child img{
     width: 31px;
+    border-radius: 50%;
+    padding: 15px;
+    transition: .3s;
+}
+main .main1 .color-mode a:first-child img:hover{
+    background-color: rgba(255, 255, 255, 0.8);
 }
 main .main1 .color-mode a:last-child img{
+    padding: 15px;
     width: 30px;
+    border-radius: 50%;
 } 
+main .main1 .color-mode a:last-child img:hover{
+    background-color: rgba(255, 255, 255, 0.8);
+}
 
 main .main1 #main1-container{
     list-style: none;
@@ -114,6 +139,9 @@ main .main1 #main1-container{
 main .main1 #main1-container li a{
     display: block;
     font-size: 6.25rem;
+}
+main .main1 #main1-container li.hoverEvent{
+    -webkit-text-fill-color: #000;
 }
 main .main1 #main1-container li:first-child,
 main .main1 #main1-container :nth-child(2){
@@ -195,6 +223,8 @@ main .main3 .publishing3 strong{
 /* footer */
 footer{
     margin-left: 38.75rem;
+    position: relative;
+    z-index: 999;
 }
 footer h2{
     margin-bottom: 6.25rem;
@@ -222,10 +252,20 @@ footer > p {
 
 /* dark mode active */
 body.active{
-    background-color: #000;
+    background-color: #222;
     color: #fff;
 }
 body.active a{
     color: #fff;
 }
+
+@media all and (max-width:1600px){
+    html{
+        font-size: 0.9rem
+    }
+    main,footer{
+        margin-left: 28rem;
+    }
+}
+
 
