@@ -1,7 +1,7 @@
     // dark, light mode
     const dark = document.querySelector('#dark');//dark btn
     const light = document.querySelector('#light');//light btn
-    const hoverEventA = document.querySelectorAll('main .main1 #main1-container li a');
+    const hoverEventA = document.querySelector('main .main1 #main1-container li a');
 
     // webkit stroke
     const Wstroke1px = document.querySelectorAll('.Wstroke1px');
@@ -14,38 +14,41 @@
     const arrowBox = document.querySelector('#arrowbox');
     
     // mouse move
-    const circle = document.querySelector('.circle')
+    const circle = document.querySelector('.circle');
+    const aTag = document.querySelectorAll('a');
 
     const onMove = (e) =>{
+        // const target = e.target;
         circle.style.left = `${e.pageX-8}px`
         circle.style.top = `${e.pageY-8}px`
+        aTag.forEach(item => {
+            item.addEventListener('mouseenter',()=>{
+                circle.classList.add('cursor_scale');
+            });
+            item.addEventListener('mouseleave',()=>{circle.classList.remove('cursor_scale');
+            });
+        });
     }
-
     addEventListener('mousemove', onMove);
 
 
     document.querySelector('#main1-container li');
-    console.log(document.querySelector('#main1-container li'));
 
-    // document.querySelector('#main1-container li').classList.add('active')
+    document.querySelector('#main1-container li').classList.add('active')
     
-    hoverEventA.forEach(item => {
-        item.addEventListener('mouseover',(e)=>{
-            console.log(e.currentTarget);
-           e.currentTarget.parentNode.classList.add('hoverEvent')
-        })
-    });
-
-
     Wstroke1px.forEach(Wstroke1px => {
         dark.addEventListener('click', () => {
             Wstroke1px.style.webkitTextStroke ='1px #fff'
             Wstroke1px.style.webkitTextFillColor = 'transparent';
         });
     });
+
     dark.addEventListener('click', () => {
         document.body.classList.add('active');
         document.querySelector('.contact_a').classList.add('on');
+        // hoverEventA.addEventListener('mouseover',()=>{
+        //     hoverEventA.classList.add('hoverEvent') });
+
         Wstroke.forEach(Wstroke=>{
             
             // stroke text color change
@@ -61,13 +64,12 @@
             document.querySelector('#light').src = './images/Wlight.svg'
             document.querySelector('#dark').src = './images/Wdark.svg'
 
-             // remove .active
+            // remove .active
             light.addEventListener('click',()=>{
             document.body.classList.remove('active');
             document.querySelector('.contact_a').classList.remove('on');
             });
         });
-        
     });
 
 // dark -> light
@@ -77,7 +79,8 @@ Wstroke1px.forEach(Wstroke1px => {
         Wstroke1px.style.webkitTextFillColor = 'transparent';
     });
 });
-light.addEventListener('click', () => {
+light.addEventListener('click', (e) => {
+    e.preventDefault();
     Wstroke.forEach(Wstroke=>{
         // stroke text color change
         Wstroke.style.webkitTextStroke ='2px #000'
@@ -93,3 +96,4 @@ light.addEventListener('click', () => {
         document.querySelector('#dark').src = './images/dark.svg'
     });
 });
+
