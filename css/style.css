@@ -4,7 +4,10 @@ p, h1, h2, h3, h4, ul{
 }
 html{
     scroll-behavior: smooth;
-    /* cursor: none; */
+    cursor: none;
+}
+a:hover{
+    cursor: none;
 }
 body{
     font-family: 'LeferiPoint-WhiteA', sans-serif;
@@ -14,6 +17,31 @@ body{
     background-color: #eee;
     /* background: linear-gradient(90deg, hsl(var(--grad-start), 0%, 100%), hsl(var(--grad-end), 20%, 89%)); */
     transition: .5s;
+}
+/* mouse move */ 
+.circle{
+    background-color: rgb(240,181,7);
+    width: 1rem; height: 1rem;
+    border-radius: 50%;
+    position: absolute;
+}
+.circle::before{
+    content: '';
+    width: 4rem; height: 4rem;
+    border: 1px solid rgb(240,181,7);
+    border-radius: 50%;
+    display: block;
+
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    transition: .3s;
+}
+.circle.cursor_scale.circle::before{
+    top: 100%; left: 100%;
+    transform: scale(2) translateY(-33%) translateX(-33%);
+    transform-origin: center;
+    border-width: 0.5px;
 }
 a{
     text-decoration: none;
@@ -25,14 +53,7 @@ a{
 .upper{
     text-transform: uppercase;
 }
-/* mouse move */ 
-.circle{
-    background-color: transparent;
-    width: 0rem; height: 0rem;
-    border-radius: 50%;
-    position: absolute;
-    box-shadow: 0  0 11rem 5rem rgb(140, 196, 255) ;
-}
+
 /* header */
 header{
     position: fixed;
@@ -140,9 +161,12 @@ main .main1 #main1-container li a{
     display: block;
     font-size: 6.25rem;
 }
-main .main1 #main1-container li.hoverEvent{
+/* main .main1 #main1-container li:hover a{
     -webkit-text-fill-color: #000;
 }
+main .main1 #main1-container li a.hoverEvent{
+    -webkit-text-fill-color: #fff;
+} */
 main .main1 #main1-container li:first-child,
 main .main1 #main1-container :nth-child(2){
     margin-bottom: 1rem;
@@ -155,6 +179,10 @@ main .main2 h2{
 }
 main .main2 .title{
     font-size: 1.563rem;
+}
+main .main2 p{
+    font-size: 1.1rem;
+    line-height: 1.8;
 }
 main .main2 .main2-box1 h3{
     font-size: 2.813rem;
@@ -181,6 +209,7 @@ main .main3 h2{
 }
 main .main3 p{
     line-height: 2;
+    font-size: 1.1rem;
 }
 main .main3 h2{
     font-size: 1.563rem;
@@ -227,6 +256,7 @@ footer{
     z-index: 999;
 }
 footer h2{
+    padding-top: 6.25rem;
     margin-bottom: 6.25rem;
     font-size: 3.75rem;
 }
@@ -261,7 +291,7 @@ body.active a{
 
 @media all and (max-width:1600px){
     html{
-        font-size: 0.9rem
+        font-size: 0.95rem
     }
     main,footer{
         margin-left: 28rem;
