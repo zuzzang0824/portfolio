@@ -43,6 +43,25 @@ body{
     transform-origin: center;
     border-width: 0.5px;
 }
+/* top button */
+.top_btn{z-index: 999;}
+.top_btn img{
+    opacity: 0;
+    width: 2.188rem;
+    position: fixed;
+    bottom: 6.25rem;
+    right: 3rem;
+    transform: rotate(270deg);
+    border-radius: 50%;
+    padding: 15px 10px;
+    transition: .5s;
+}
+.top_btn img:hover{
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.top_btn.show_top_btn img{
+    opacity: 1;
+}
 a{
     text-decoration: none;
     color: #000
@@ -112,7 +131,6 @@ header #blog li:last-child a img{
 main{
     margin-left: 38.75rem;
     position: relative;
-    z-index: 999;
 }
 main .main1{
     height: 100vh;
@@ -204,6 +222,7 @@ main .main2 h4{
     margin-bottom: 1.25rem;
 }
 /* main3 */
+main .main3{z-index: 9;}
 main .main3 h2{
     margin-bottom: 5rem;
 }
@@ -240,7 +259,7 @@ main .main3 .design1 strong:nth-child(4){
     margin-bottom: 1.25rem;
 }
 main .main3 .main3-box3 strong:last-child{
-    margin-bottom: 18.75rem;
+    margin-bottom: 12.5rem;
 }
 main .main3 .main3-box3 h4{
     text-transform: uppercase;
@@ -249,11 +268,108 @@ main .main3 .publishing2 strong,
 main .main3 .publishing3 strong{
     margin-top: 4.375rem;
 }
+/* main 4 */
+/* project box header */
+main .main4 .project_box{
+    position: relative;
+    margin-bottom: 9.375rem;
+}
+main .main4 h2{
+    font-size: 1.563rem;
+    margin-bottom: 5rem;
+    padding-top: 6.25rem;
+}
+main .main4 .project_box .project_box_header{
+    display: flex;
+    align-items: center;
+    margin-bottom: 3.125rem;
+}
+main .main4 .project_box .project_box_header h4{
+    font-size: 2.188rem;
+    text-transform: capitalize;
+}
+main .main4 .project_box .project_box_header p{
+    font-size: 1.563rem;
+    margin-left: 7.3rem;
+}
+main .main4 .project_box .project_box_header a{
+    position: absolute;
+    right: 0;
+}
+main .main4 .project_box .project_box_header a img{
+    width: 4.563rem;   
+}
+/* project box bottom */
+main .main4 .project_box .project_box_bottom{
+    display: flex;
+    align-items: flex-end;
+}
+main .main4 .project_box .project_box_bottom .project_box_left{
+    font-size: 1.25rem;
+    line-height: 2.1;
+}
+main .main4 .project_box .project_box_bottom .project_box_left > p:nth-child(3){
+    margin-bottom: 5.625rem;
+}
+main .main4 .project_box .project_box_bottom .project_box_left .project_box_left_period{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: flex-end;
+}
+main .main4 .project_box .project_box_bottom .project_box_left .project_box_left_period p{
+    font-size: 0.938rem;
+}
+main .main4 .project_box .project_box_bottom .project_box_left .project_box_left_period .period_line{
+    width: 3.375rem;
+    height: 0.5px;
+    background-color: #000;
+    margin: 0px 1.25rem;
+}
+main .main4 .project_box .project_box_bottom .project_box_left .project_box_left_period .period_line.WLine{
+    background-color: #fff;
+}
+main .main4 .project_box .project_box_bottom .project_box_right{
+    display: block;
+    width: 100%;
+    height: 18.75rem;
+    background: url(../images/hue_calm.jpg) no-repeat 50% /cover; 
+    font-size: 1.563rem;
+    color: #fff;
+    text-transform: capitalize;
+    margin-left: 6.563rem;
+}
+/* project image, margin left change */
+/* paul bassett */
+main .main4 .project_box:nth-child(3) .project_box_bottom .project_box_right{
+    background-image: url(../images/paul_bassett.jpeg);
+}
+main .main4 .project_box:nth-child(3) .project_box_header p{
+    margin-left: 3.6rem;
+}
+/* 펫 살롱 */
+main .main4 .project_box:nth-child(4) .project_box_bottom .project_box_right{
+    background-image: url(../images/empty.png);
+}
+main .main4 .project_box:nth-child(4) .project_box_header p{
+    margin-left: 12rem;
+}
+/* script + coding */
+main .main4 .project_box:nth-child(5) .project_box_bottom .project_box_right{
+    background-image: url(../images/empty.png);
+}
+/* clone coding */
+main .main4 .project_box:nth-child(6) .project_box_bottom .project_box_right{
+    background-image: url(../images/empty.png);
+}
+/* last box margin bottme */
+main .main4 .project_box:last-child{
+    margin-bottom: 12.5rem;
+}
 /* footer */
 footer{
     margin-left: 38.75rem;
     position: relative;
-    z-index: 999;
 }
 footer h2{
     padding-top: 6.25rem;
@@ -295,6 +411,9 @@ body.active a{
     }
     main,footer{
         margin-left: 28rem;
+    }
+    main .main3 h4, main .main3 strong{
+        font-size: 2.5rem;
     }
 }
 
