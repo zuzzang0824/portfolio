@@ -115,6 +115,11 @@ light.addEventListener('click', (e) => {
 
     // project period line color change
     periodLine.classList.remove('WLine');
+
+    //project arrow color change
+    projectArrow.forEach(item => {
+        item.src = './images/arrow.svg'
+    });
 });
 
 //top button

@@ -5,6 +5,7 @@ p, h1, h2, h3, h4, ul{
 html{
     scroll-behavior: smooth;
     cursor: none;
+    /* z-index: 9999; */
 }
 a:hover{
     cursor: none;
@@ -15,7 +16,6 @@ body{
     margin: 0;
     position: relative;
     background-color: #eee;
-    /* background: linear-gradient(90deg, hsl(var(--grad-start), 0%, 100%), hsl(var(--grad-end), 20%, 89%)); */
     transition: .5s;
 }
 /* mouse move */ 
@@ -23,7 +23,8 @@ body{
     background-color: rgb(240,181,7);
     width: 1rem; height: 1rem;
     border-radius: 50%;
-    position: absolute;
+    position: absolute; 
+    /* z-index: 9999; */
 }
 .circle::before{
     content: '';
@@ -44,7 +45,7 @@ body{
     border-width: 0.5px;
 }
 /* top button */
-.top_btn{z-index: 999;}
+.top_btn{z-index: 99;}
 .top_btn img{
     opacity: 0;
     width: 2.188rem;
@@ -343,6 +344,7 @@ main .main4 .project_box .project_box_bottom .project_box_right{
 /* paul bassett */
 main .main4 .project_box:nth-child(3) .project_box_bottom .project_box_right{
     background-image: url(../images/paul_bassett.jpeg);
+    display: block;
 }
 main .main4 .project_box:nth-child(3) .project_box_header p{
     margin-left: 3.6rem;
