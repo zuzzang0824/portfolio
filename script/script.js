@@ -1,7 +1,6 @@
 // dark, light mode
 const dark = document.querySelector('#dark');//dark btn
 const light = document.querySelector('#light');//light btn
-const hoverEventA = document.querySelector('main .main1 #main1-container li a');
 
 // webkit stroke
 const Wstroke1px = document.querySelectorAll('.Wstroke1px');
@@ -31,6 +30,7 @@ const onMove = (e) =>{
     // const target = e.target;
     circle.style.left = `${e.pageX-8}px`
     circle.style.top = `${e.pageY-8}px`
+
     aTag.forEach(item => {
         item.addEventListener('mouseenter',()=>{
             circle.classList.add('cursor_scale');
@@ -39,9 +39,7 @@ const onMove = (e) =>{
         });
     });
 }
-    addEventListener('mousemove', onMove);
-    document.querySelector('#main1-container li');
-    document.querySelector('#main1-container li').classList.add('active')
+addEventListener('mousemove', onMove);
     
 //webkit text stroke edit
 Wstroke1px.forEach(Wstroke1px => {
