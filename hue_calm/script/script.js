@@ -10,13 +10,13 @@ var swiper = new Swiper(".mySwiper1", {
   spaceBetween: 30,
   centeredSlides: true,
   loop: true,
-  // autoplay: {
-  //   delay: 2700,
-  //   disableOnInteraction: false,
-  // },
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
+  },
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
   },
 });
 // sun care swiper

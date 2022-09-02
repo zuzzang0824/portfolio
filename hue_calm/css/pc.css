@@ -77,6 +77,7 @@ main #top .swiper {
   width: 60%;
   margin-left: 0;
   margin-top: 5.313rem;
+  height: 70vh;
 }
 main #top .swiper-slide img {
   display: block;
