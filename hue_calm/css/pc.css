@@ -64,9 +64,9 @@ main #top p {
   text-align: left;
   font-size: 0.9rem;
 }
-@media (min-width: 1600px) {
+@media (min-width: 1200px) {
   main #top p {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 }
 main #top .view_more {
@@ -134,6 +134,7 @@ main #sun .swiper-wrapper {
 /* swiper button */
 main #sun .swiper-button-next,
 main #sun .swiper-button-prev {
+  display: block;
   width: 2.188rem;
   height: 2.188rem;
   color: #777;
@@ -141,11 +142,14 @@ main #sun .swiper-button-prev {
   position: absolute;
   top: 22px;
   z-index: 9999;
-  overflow: unset;
 }
 main #sun .swiper-button-next:after,
 main #sun .swiper-button-prev:after {
   font-size: 1rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 main #sun .swiper-button-next {
   right: 6.25rem;
@@ -214,6 +218,9 @@ main #product .product_wrapper:nth-child(4) {
   margin-right: 40px;
   width: calc(33.33% - 80px);
 }
+main #product .img_height_edit {
+  height: 357.29px;
+}
 main #product .view_more_mb {
   display: none;
 }
@@ -277,9 +284,6 @@ main #set .set_container .right {
   top: 50%;
   right: 50%;
   transform: translateY(-50%);
-}
-main #set .set_container {
-  height: 100%;
 }
 main #set .set_container .set_flex_item {
   width: 50%;

@@ -7,7 +7,7 @@
       name="viewport"
       content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
     />
-    <title>Hue_Calm</title>
+    <title>1.HUE_CALM</title>
     <!-- reset.css -->
     <link rel="stylesheet" href="./common/minireset.css" />
     <!-- fonts -->
@@ -20,6 +20,25 @@
   </head>
   <body>
     <div class="circle"></div>
+    <div class="contact_popup">
+      <a class="close_btn"> </a>
+      <div class="contact_popup_wrapper">
+        <h2 class="font-black" id="contact">CONTACT ME</h2>
+        <div class="contact">
+          <div class="info-box">
+            <div id="arrowbox">
+              <img src="./images/Warrow.svg" alt="arrow" />
+            </div>
+            <div class="info">
+              <p>이주현</p>
+              <p>수원여자대학교 시각디자인학과 미디어디자인 졸업</p>
+              <p>+82 10 8006 3955</p>
+              <p>tosuni0824@gmail.com</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <nav>
       <a href="./index.html">
         <div class="arrow">
@@ -28,26 +47,10 @@
         <h2>Lee JuHyeon</h2>
       </a>
 
-      <a href="#">
+      <a href="#" id="contact-button">
         <h2>Contact</h2>
       </a>
     </nav>
-    <footer>
-      <h2 class="font-black" id="contact">CONTACT ME</h2>
-      <div class="contact">
-        <div class="info-box">
-          <div id="arrowbox">
-            <img src="./images/Warrow.svg" alt="arrow" />
-          </div>
-          <div class="info">
-            <p>이주현</p>
-            <p>수원여자대학교 시각디자인학과 미디어디자인 졸업</p>
-            <p>+82 10 8006 3955</p>
-            <p>tosuni0824@gmail.com</p>
-          </div>
-        </div>
-      </div>
-    </footer>
     <main>
       <div class="main1">
         <!-- top -->
@@ -89,7 +92,7 @@
             <div class="flex-box4">
               <p>사용 언어</p>
               <div class="line"></div>
-              <p>HTML5, CSS3</p>
+              <p>HTML5, CSS3, JavaScript</p>
             </div>
           </div>
           <div class="main2-txt-container2">
@@ -114,7 +117,7 @@
         </div>
 
         <div class="main3-box1">
-          <!-- size, using -->
+          <!-- size, using, info -->
           <div class="size">
             <p>Size</p>
             <p>PC 1200px</p>
@@ -125,21 +128,43 @@
             <p>Using</p>
             <p>HTML5</p>
             <p>CSS3</p>
+            <p>JavaScript</p>
+          </div>
+          <div class="info">
+            <p>Info</p>
+            <p>웹 표준, 웹 접근성을 준수한 시멘틱 마크업</p>
+            <p>Flex, Grid, Position을 이용한 레이아웃 디자인</p>
+            <p>Media Query를 이용한 반응형 웹</p>
+            <p>Swiper를 이용한 자동 슬라이더 구현</p>
           </div>
         </div>
 
         <div class="main3-box2">
           <!-- problem, solution -->
           <p>Problem&Solution</p>
-          <p>
-            문제풀이 내용얼마나 피에 노래하며 보는 못하다 청춘은 이것은
-            위하여서, 사막이다. 옷을 곳으로 할지니, 찾아 투명하되 아름답고
-            군영과 산야에 보라. 앞이 얼마나 보이는 우리는 있는 천자만홍이
-            뜨거운지라, 거선의 살 힘있다. 이성은 그와 물방아 인간의 커다란
-            것이다. 이상 희망의 생생하며, 것은 꽃 고행을 돋고, 있는 무엇을
-            아름다우냐? 가치를 청춘은 꽃이 못하다 부패를 심장은 그것은 속잎나고,
-            듣는다. 석가는 넣는 보내는 청춘의 있다.
-          </p>
+          <div class="solution-wrapper">
+            <p>
+              <em>1.</em>PC 화면을 1920px에 맞춰 제작하고 있었는데, 사용하고
+              있는 노트북과 데스크탑으로 확인했을 때
+              <strong>해상도가 달라 의도한 대로 보이지 않아</strong> 어려움이
+              있었다. 해결 방법으로 px 대신
+              <strong>%와 REM으로 작업</strong>해서 요소들을 유동적으로
+              제어했다.
+            </p>
+            <p>
+              <em>2.</em>PC와 mobile, Tablet에서의
+              <strong>보여지는 Swiper의 개수가 달라</strong> 적용이 어려웠다.
+              해결 방법으로
+              <strong>swiper-slide의 width를 %로 조정해 제어</strong>했지만
+              Swiper가
+              <strong
+                >가운데 정렬로 보여져야 하는데, 페이지의 왼쪽에서부터
+                정렬돼있었다.</strong
+              >
+              이 점은
+              <strong>swiper-wrapper에 left 값을 %로 조정해 해결</strong>했다.
+            </p>
+          </div>
         </div>
 
         <div class="main3-box3">
@@ -200,18 +225,21 @@
           <h2>Review</h2>
           <div class="title-line"></div>
         </div>
-
         <p>
-          그러므로 갑 새 얼음에 그들은 만천하의 얼음 피가 예수는 있다. 보이는
-          물방아 용기가 웅대한 우리는 살 위하여서. 가슴이 불어 꾸며 같으며,
-          이것이다. 가슴이 구하지 남는 설산에서 하는 스며들어 영락과 이것이다.
-          그들의 새가 어디 무한한 이상을 바이며, 설레는 일월과 듣는다. 얼마나
-          이상의 구하지 그들은 칼이다. 그들의 새가 어디 무한한 이상을 바이며,
-          설레는 일월과 듣는다. 얼마나 이상의 구하지 그들은 칼이다.
+          HTML, CSS를 배우고 처음으로 반응형 웹을 디자인하고 퍼블리싱 했다. 화면
+          크기에 따라 CSS를 작성하고 하나의 CSS를 수정하면 다른 CSS도 값이 같이
+          적용되는 상황도 있어 수정하는 데에 어려움이 있었다. 처음 의도한
+          디자인대로 퍼블리싱 하려고 했지만, 의도처럼 되진 않아서 디자인을
+          수정한 부분도 있다. 첫 반응형 웹 제작이다 보니 미숙한 부분이 많았지만,
+          다음 작업물에선 이 점을 숙지해서 더 나은 홈페이지를 만들 수 있을 것
+          같다.
         </p>
-
         <!-- view website -->
-        <a href="./hue_calm/hue_calm.html" class="view-container">
+        <a
+          href="./hue_calm/hue_calm.html"
+          class="view-container"
+          target="_blank"
+        >
           <div class="bg-img"></div>
           <p>View WebSite</p>
         </a>

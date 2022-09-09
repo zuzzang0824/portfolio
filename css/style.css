@@ -7,10 +7,12 @@ h4,
 ul {
   margin: 0;
 }
+::selection {
+  background-color: #fc4f4f86;
+}
 html {
   scroll-behavior: smooth;
   cursor: none;
-  /* z-index: 9999; */
 }
 a:hover {
   cursor: none;
@@ -30,7 +32,9 @@ body {
   height: 1rem;
   border-radius: 50%;
   position: absolute;
-  /* z-index: 9999; */
+  z-index: 9;
+  pointer-events: none;
+  transition: background-color 0.3s;
 }
 .circle::before {
   content: "";
@@ -52,6 +56,12 @@ body {
   transform: scale(2) translateY(-33%) translateX(-33%);
   transform-origin: center;
   border-width: 0.5px;
+}
+.circle.cursor_color {
+  background-color: #fc4f4f;
+}
+.circle.cursor_color.circle::before {
+  border: 1px solid #fc4f4f;
 }
 /* top button */
 .top_btn {

@@ -1,9 +1,15 @@
 @charset "utf-8";
+::-webkit-scrollbar {
+  behavior: smooth;
+}
 a {
   color: #000;
 }
 a:hover {
   cursor: none;
+}
+::selection {
+  background-color: #d9d5d1;
 }
 html {
   font-family: "LeferiPoint-WhiteA", sans-serif;
@@ -11,7 +17,7 @@ html {
   cursor: none;
 }
 main {
-  padding: 2rem 20rem;
+  padding: 2rem 12rem;
   line-height: 2;
 }
 .title-line {
@@ -31,7 +37,8 @@ main {
   height: 1rem;
   border-radius: 50%;
   position: absolute;
-  /* z-index: 999999; */
+  z-index: 999999;
+  pointer-events: none;
 }
 .circle::before {
   content: "";
@@ -68,7 +75,7 @@ nav {
   background-color: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(0.5px);
   padding: 2rem 7.5rem;
-  z-index: 9999;
+  z-index: 9;
 }
 nav a:first-child {
   display: flex;
@@ -79,9 +86,79 @@ nav a .arrow {
   display: grid;
   place-content: center;
 }
+/* contact-popup-background */
+.contact_popup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 99999;
+  color: #fff;
+}
+/* contact-popup */
+.contact_popup {
+  position: absolute;
+  display: none;
+  transition: 1s;
+}
+.contact_popup.contact_popup_show {
+  display: block;
+  transition: 2s;
+}
+.contact_popup_wrapper {
+  margin-left: 17rem;
+  margin-top: 4rem;
+}
+.contact_popup h2 {
+  padding-top: 6.25rem;
+  margin-bottom: 6.25rem;
+  font-size: 3.75rem;
+}
+.contact_popup .info-box {
+  display: flex;
+  align-items: center;
+}
+.contact_popup .info-box .info {
+  margin-left: 7.5rem;
+}
+.contact_popup .contact p {
+  margin-bottom: 25px;
+  font-size: 1.875rem;
+}
+.contact_popup .contact p:last-child {
+  margin-bottom: 0;
+}
+.contact_popup > p {
+  margin-top: 12.375rem;
+  float: right;
+  margin-bottom: 6.25rem;
+}
+/* contact popup-close-button */
+.close_btn {
+  display: block;
+  position: absolute;
+  top: 12.5rem;
+  right: 17rem;
+  width: 4rem;
+  height: 4rem;
+}
+.close_btn::before,
+.close_btn::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
+  display: block;
+  transform: rotate(45deg);
+}
+.close_btn::after {
+  transform: rotate(-45deg);
+}
 
 main {
-  margin-top: 14.375rem;
+  margin-top: 5rem;
 }
 
 /* main1 */
@@ -96,10 +173,12 @@ main .main1 h1 {
   -webkit-text-fill-color: transparent;
   font-size: 9.375rem;
   text-align: center;
+  white-space: nowrap;
 }
+
 main .main1 ul {
   position: absolute;
-  right: 18.75rem;
+  right: 7.5rem;
   line-height: 3;
   bottom: 6.25rem;
 }
@@ -152,7 +231,7 @@ main .main2 .main2-flex-container .main2-txt-container1 .flex-box1,
   align-items: center;
 }
 main .main2 .main2-flex-container .main2-txt-container2 strong {
-  font-family: "LeferiPoint-BlackA", sans-serif;
+  background-color: #d9d5d1;
 }
 
 /* main3 */
@@ -176,14 +255,29 @@ main .main3 .main3-box1 p:first-child {
   font-size: 1.875rem;
   margin-bottom: 2.188rem;
 }
-main .main3 .main3-box1 .size {
-  margin-right: 14.375rem;
+main .main3 .main3-box1 .size,
+main .main3 .main3-box1 .using {
+  margin-right: 10rem;
 }
 
-main .main3 .main3-box2 p:first-child {
+main .main3 .main3-box2 em {
+  font-size: 2rem;
+  margin-right: 1rem;
+}
+main .main3 .main3-box2 > p {
   font-size: 1.875rem;
   margin-top: 12.5rem;
   margin-bottom: 2.188rem;
+}
+main .main3 .main3-box2 .solution-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+main .main3 .main3-box2 .solution-wrapper p {
+  width: 45%;
+}
+main .main3 .main3-box2 .solution-wrapper strong {
+  background-color: #d9d5d1ab;
 }
 main .main3 .main3-box3 {
   width: 37.5rem;
@@ -198,7 +292,7 @@ main .main3 .main3-box3 {
 /* main4 */
 main .main4 {
   position: relative;
-  z-index: 999;
+  z-index: 9;
 }
 main .main4 h2 {
   font-size: 2.5rem;
@@ -280,8 +374,8 @@ main .main4 .main4-box4 .color-box .color-chip:nth-child(6) {
   background-color: #000000;
 }
 main .main4 .main4-box4-bg-img {
-  width: 45.688rem;
-  height: 48.375rem;
+  width: 38rem;
+  height: 45rem;
   position: absolute;
   background: url(../images/hue_calm_2.png) 50% / contain;
   opacity: 50%;
@@ -308,6 +402,8 @@ main .main5 .main5-flex-container .title-line {
 }
 main .main5 p {
   margin-top: 2.188rem;
+  width: 70%;
+  font-size: 1.1rem;
 }
 
 main .main5 .view-container {
@@ -321,6 +417,7 @@ main .main5 .view-container {
 main .main5 .view-container p {
   font-size: 1.625rem;
   height: 100%;
+  width: 100%;
   color: #fff;
   font-family: "LeferiPoint-BlackA", sans-serif;
   display: grid;
@@ -333,7 +430,7 @@ main .main5 .view-container:hover p {
   opacity: 1;
   background-color: rgba(255, 255, 255, 0.3);
 }
-@media all and (max-width: 1600px) {
+@media all and (max-width: 1700px) {
   html {
     font-size: 1rem;
   }
@@ -351,8 +448,6 @@ main .main5 .view-container:hover p {
     height: 32.5rem;
   }
   main .main4 .main4-box4-bg-img {
-    width: 34.375rem;
-    height: 43.75rem;
     position: absolute;
     background: url(../images/hue_calm_2.png) 50% / contain;
     opacity: 50%;

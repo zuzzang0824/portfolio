@@ -1,5 +1,5 @@
-const aTag = document.querySelectorAll(".prevent");
-aTag.forEach((a) => {
+const aPrevent = document.querySelectorAll(".prevent");
+aPrevent.forEach((a) => {
   a.addEventListener("click", (e) => {
     e.preventDefault();
   });
