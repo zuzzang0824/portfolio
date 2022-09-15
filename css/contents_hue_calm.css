@@ -1,7 +1,4 @@
 @charset "utf-8";
-::-webkit-scrollbar {
-  behavior: smooth;
-}
 a {
   color: #000;
 }
@@ -61,6 +58,12 @@ main {
   transform-origin: center;
   border-width: 0.5px;
 }
+.circle.cursor_color {
+  background-color: #fc4f4f;
+}
+.circle.cursor_color.circle::before {
+  border: 1px solid #fc4f4f;
+}
 /* nav */
 nav {
   font-size: 1.563rem;
@@ -75,7 +78,7 @@ nav {
   background-color: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(0.5px);
   padding: 2rem 7.5rem;
-  z-index: 9;
+  z-index: 99;
 }
 nav a:first-child {
   display: flex;
@@ -137,10 +140,11 @@ nav a .arrow {
 }
 /* contact popup-close-button */
 .close_btn {
-  display: block;
+  display: grid;
+  align-content: center;
   position: absolute;
-  top: 12.5rem;
-  right: 17rem;
+  top: 2.7rem;
+  right: 9rem;
   width: 4rem;
   height: 4rem;
 }
@@ -148,10 +152,12 @@ nav a .arrow {
 .close_btn::after {
   content: "";
   width: 100%;
-  height: 1px;
+  height: 3px;
   background-color: #fff;
   display: block;
   transform: rotate(45deg);
+  position: absolute;
+  top: 50%;
 }
 .close_btn::after {
   transform: rotate(-45deg);
@@ -326,18 +332,32 @@ main .main4 .main4-box2 .main4-box2-flexbox p {
 
 main .main4 .main4-box3 {
   line-height: 1.5;
-}
-main .main4 .main4-box3 p:first-child {
   margin-top: 9.375rem;
+}
+main .main4 .main4-box3 .font_wrapper {
+  display: flex;
+}
+main .main4 .main4-box3 > p:first-child {
   font-size: 1.875rem;
   margin-bottom: 2.5rem;
 }
-main .main4 .main4-box3 p:nth-child(2) {
-  font-size: 2.5rem;
+main .main4 .main4-box3 .font_wrapper p {
+  font-size: 1.8rem;
+  margin-bottom: 0;
+  margin-right: 7rem;
 }
-main .main4 .main4-box3 p:last-child {
-  font-size: 2.5rem;
-  font-family: "LeferiPoint-BlackA", sans-serif;
+.batang {
+  font-family: "Gowun Batang", serif;
+  white-space: nowrap;
+}
+.batang:last-child {
+  font-weight: 700;
+}
+.mont {
+  font-family: "Montserrat", sans-serif;
+}
+.mont:last-child {
+  font-weight: 600;
 }
 
 main .main4 .main4-box4 p {
@@ -349,11 +369,47 @@ main .main4 .main4-box4 .color-box {
   display: flex;
 }
 main .main4 .main4-box4 .color-box .color-chip {
-  width: 6.25rem;
-  height: 6.25rem;
+  min-width: 6rem;
+  min-height: 6rem;
   margin-right: 0.938rem;
   border-radius: 0.625rem;
+  position: relative;
 }
+main .main4 .main4-box4 .color-box .color-chip::after {
+  content: "tlqkf";
+  font-size: 0.9rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: 0.2s;
+}
+main .main4 .main4-box4 .color-box .color-chip:hover.color-chip::after {
+  opacity: 100%;
+}
+main .main4 .main4-box4 .color-box .color-chip:nth-child(1)::after {
+  content: "#ffffff";
+}
+main .main4 .main4-box4 .color-box .color-chip:nth-child(2)::after {
+  content: "#f4f4f4";
+}
+main .main4 .main4-box4 .color-box .color-chip:nth-child(3)::after {
+  content: "#aaaaaa";
+}
+main .main4 .main4-box4 .color-box .color-chip:nth-child(4)::after {
+  content: "#777777";
+  color: #fff;
+}
+main .main4 .main4-box4 .color-box .color-chip:nth-child(5)::after {
+  content: "#333333";
+  color: #fff;
+}
+main .main4 .main4-box4 .color-box .color-chip:nth-child(6)::after {
+  content: "#000000";
+  color: #fff;
+}
+
 main .main4 .main4-box4 .color-box .color-chip:nth-child(1) {
   background-color: #fff;
   border: 0.25px solid #000;

@@ -10,9 +10,12 @@ const onMove = (e) => {
   aTag.forEach((item) => {
     item.addEventListener("mouseenter", () => {
       circle.classList.add("cursor_scale");
+      circle.classList.add("cursor_color");
     });
     item.addEventListener("mouseleave", () => {
       circle.classList.remove("cursor_scale");
+      circle.classList.remove("cursor_color");
+      circle.classList.remove(".circle::before");
     });
   });
 };
