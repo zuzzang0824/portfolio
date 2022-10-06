@@ -186,7 +186,7 @@ main .main1 ul {
   position: absolute;
   right: 7.5rem;
   line-height: 3;
-  bottom: 6.25rem;
+  bottom: 3rem;
 }
 
 /* main2 */
@@ -194,7 +194,7 @@ main .main2 .mockup {
   width: 56.25rem;
   height: 28.875rem;
   margin: 0 auto;
-  margin-top: 60vh;
+  margin-top: 40%;
   position: relative;
 }
 main .main2 .mockup img {
@@ -250,6 +250,26 @@ main .main2 .main2-flex-container .main2-txt-container2 {
 main .main3 {
   margin-top: 12.5rem;
 }
+.backBOX {
+  position: absolute;
+  left: 0;
+  top: 315.5%;
+  width: 100%;
+  height: 88.5rem;
+  background-color: rgba(238, 233, 229, 0.35);
+  z-index: -9;
+}
+@media all and (min-width: 1530px) {
+  .backBOX {
+    position: absolute;
+    left: 0;
+    top: 315.8%;
+    width: 100%;
+    height: 87.4rem;
+    background-color: rgba(238, 233, 229, 0.35);
+    z-index: -9;
+  }
+}
 main .main3 .main3-flex-container {
   display: flex;
   align-items: center;
@@ -271,7 +291,7 @@ main .main3 .main3-box1 .as1,
 .as3,
 .as4 {
   display: grid;
-  grid-template-columns: 1fr 1fr 3fr;
+  grid-template-columns: 1.1fr 1fr 3fr;
 }
 main .main3 .main3-box1 .circle_arrow {
   width: 30px;
@@ -305,8 +325,7 @@ main .main3 .main3-box1 .keyword_flex_box {
   display: flex;
 }
 main .main3 .main3-box1 .keyword {
-  background-color: antiquewhite;
-  width: 240px;
+  min-width: 240px;
   height: 90px;
   border-radius: 45px;
   box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.1);
@@ -355,6 +374,17 @@ main .main4 .main4-flex-container {
   align-items: center;
   justify-content: space-between;
 }
+main .main4 .main4-box1 .logo_box {
+  width: 181px;
+  height: 181px;
+  border-radius: 29px;
+  border: solid 1px #707070;
+  background-color: #fff;
+  margin-right: 90px;
+}
+main .main4 .main4-box1 .logo_wrapper {
+  display: flex;
+}
 main .main4 .main4-box1 p:first-child {
   font-size: 1.875rem;
   margin-top: 3.125rem;
@@ -364,50 +394,42 @@ main .main4 .main4-box1 p:first-child {
 main .main4 .main4-box2 {
   margin-top: 9.375rem;
 }
-main .main4 .main4-box2 > p {
+main .main4 .main4-box2 > p:first-child {
   font-size: 1.875rem;
   margin-bottom: 2.5rem;
 }
-main .main4 .main4-box2 .main4-box2-flexbox {
-  display: flex;
-  font-family: "LeferiPoint-BlackA", sans-serif;
-}
-main .main4 .main4-box2 .main4-box2-flexbox p {
-  margin-right: 3.125rem;
+main .main4 .main4-box2 p:nth-child(2),
+main .main4 .main4-box2 p:nth-child(3) {
+  font-size: 90px;
+  /* 프리텐다드로 바꿔야 함!!!!!!!!!!!!! */
+  font-family: "Gowun Batang", serif;
 }
 
 main .main4 .main4-box3 {
   line-height: 1.5;
   margin-top: 9.375rem;
 }
-main .main4 .main4-box3 .font_wrapper {
+main .main4 .main4-box3 .icon {
+  width: 77px;
+  height: 77px;
+  margin: 0 20px 0 0;
+  border-radius: 10px;
+  background-color: #333;
+}
+main .main4 .main4-box3 .icon_wrapper {
   display: flex;
 }
 main .main4 .main4-box3 > p:first-child {
   font-size: 1.875rem;
   margin-bottom: 2.5rem;
 }
-main .main4 .main4-box3 .font_wrapper p {
-  font-size: 1.8rem;
-  margin-bottom: 0;
-  margin-right: 7rem;
+.main4-flex-layout-container {
+  display: flex;
+  justify-content: space-between;
 }
-.batang {
-  font-family: "Gowun Batang", serif;
-  white-space: nowrap;
-}
-.batang:last-child {
-  font-weight: 700;
-}
-.mont {
-  font-family: "Montserrat", sans-serif;
-}
-.mont:last-child {
-  font-weight: 600;
-}
-
 main .main4 .main4-box4 p {
-  margin-top: 9.375rem;
+  margin-top: 3.125rem;
+  margin-bottom: 3.125rem;
   font-size: 1.875rem;
   margin-bottom: 2.5rem;
 }
@@ -415,14 +437,17 @@ main .main4 .main4-box4 .color-box {
   display: flex;
 }
 main .main4 .main4-box4 .color-box .color-chip {
-  min-width: 6rem;
-  min-height: 6rem;
-  margin-right: 0.938rem;
+  margin-right: 2.188rem;
   border-radius: 0.625rem;
+  width: 175px;
+  height: 175px;
+  border-radius: 10px;
+  margin-bottom: 2.188rem;
   position: relative;
 }
-main .main4 .main4-box4 .color-box .color-chip::after {
-  content: "tlqkf";
+.color-chip::after {
+  display: block;
+  content: "";
   font-size: 0.9rem;
   position: absolute;
   top: 50%;
@@ -434,56 +459,66 @@ main .main4 .main4-box4 .color-box .color-chip::after {
 main .main4 .main4-box4 .color-box .color-chip:hover.color-chip::after {
   opacity: 100%;
 }
-main .main4 .main4-box4 .color-box .color-chip:nth-child(1)::after {
-  content: "#ffffff";
-}
-main .main4 .main4-box4 .color-box .color-chip:nth-child(2)::after {
-  content: "#f4f4f4";
-}
-main .main4 .main4-box4 .color-box .color-chip:nth-child(3)::after {
-  content: "#aaaaaa";
-}
-main .main4 .main4-box4 .color-box .color-chip:nth-child(4)::after {
-  content: "#777777";
+main
+  .main4
+  .main4-box4
+  .color-chip-flex-container1
+  .color-chip:nth-child(1)::after {
+  content: "#FF0033";
   color: #fff;
 }
-main .main4 .main4-box4 .color-box .color-chip:nth-child(5)::after {
+main .main4 .main4-box4 .color-box .color-chip:nth-child(2)::after {
   content: "#333333";
   color: #fff;
 }
-main .main4 .main4-box4 .color-box .color-chip:nth-child(6)::after {
-  content: "#000000";
+main
+  .main4
+  .main4-box4
+  .color-chip-flex-container1
+  .color-chip:nth-child(3)::after {
+  content: "#E9E9E9";
+}
+main
+  .main4
+  .main4-box4
+  .color-chip-flex-container2
+  .color-chip:nth-child(3)::after {
+  content: "#999999";
   color: #fff;
 }
+main
+  .main4
+  .main4-box4
+  .color-chip-flex-container2
+  .color-chip:nth-child(4)::after {
+  content: "#FFFFFF";
+}
+main
+  .main4
+  .main4-box4
+  .color-chip-flex-container2
+  .color-chip:nth-child(5)::after {
+  content: "#EEE9E5";
+}
 
-main .main4 .main4-box4 .color-box .color-chip:nth-child(1) {
-  background-color: #fff;
-  border: 0.25px solid #000;
+main .main4 .main4-box4 .color-chip-flex-container1 .color-chip:nth-child(1) {
+  background-color: #ff0033;
 }
-main .main4 .main4-box4 .color-box .color-chip:nth-child(2) {
-  background-color: #f4f4f4;
-}
-main .main4 .main4-box4 .color-box .color-chip:nth-child(3) {
-  background-color: #aaaaaa;
-}
-main .main4 .main4-box4 .color-box .color-chip:nth-child(4) {
-  background-color: #777777;
-}
-main .main4 .main4-box4 .color-box .color-chip:nth-child(5) {
+main .main4 .main4-box4 .color-chip-flex-container1 .color-chip:nth-child(2) {
   background-color: #333333;
 }
-main .main4 .main4-box4 .color-box .color-chip:nth-child(6) {
-  background-color: #000000;
+main .main4 .main4-box4 .color-chip-flex-container1 .color-chip:nth-child(3) {
+  background-color: #e9e9e9;
 }
-main .main4 .main4-box4-bg-img {
-  width: 38rem;
-  height: 45rem;
-  position: absolute;
-  background: url(../images/hue_calm_2.png) 50% / contain;
-  opacity: 50%;
-  z-index: -9;
-  right: 0;
-  top: 18.75rem;
+main .main4 .main4-box4 .color-chip-flex-container2 .color-chip:nth-child(3) {
+  background-color: #999999;
+}
+main .main4 .main4-box4 .color-chip-flex-container2 .color-chip:nth-child(4) {
+  background-color: #ffffff;
+  border: 0.25px SOLID #000;
+}
+main .main4 .main4-box4 .color-chip-flex-container2 .color-chip:nth-child(5) {
+  background-color: #eee9e5;
 }
 
 /* main5 */
@@ -511,7 +546,7 @@ main .main5 p {
 main .main5 .view-container {
   width: 100%;
   height: 45rem;
-  background: url(../images/hue_calm.jpg) 50% / cover;
+  background-color: #ff00336f;
   margin-top: 12.5rem;
   display: block;
   margin-bottom: 6.25rem;
@@ -548,12 +583,6 @@ main .main5 .view-container:hover p {
   }
   main .main5 .view-container {
     height: 32.5rem;
-  }
-  main .main4 .main4-box4-bg-img {
-    position: absolute;
-    background: url(../images/hue_calm_2.png) 50% / contain;
-    z-index: -9;
-    top: 18.75rem;
   }
 }
 /* contact */
