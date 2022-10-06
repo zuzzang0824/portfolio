@@ -83,6 +83,7 @@ body {
 }
 .top_btn.show_top_btn img {
   opacity: 1;
+  z-index: 9;
 }
 a {
   text-decoration: none;
@@ -294,6 +295,9 @@ main .main3 .publishing3 strong {
 }
 /* main 4 */
 /* project box header */
+main .main4 {
+  white-space: nowrap;
+}
 main .main4 .project_box {
   position: relative;
   margin-bottom: 9.375rem;
