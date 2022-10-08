@@ -21,6 +21,21 @@ const onMove = (e) => {
 };
 addEventListener("mousemove", onMove);
 
+//top button
+const topBtn = document.querySelector(".top_btn");
+const main2 = document.querySelector(".main2");
+
+let height = main2.offsetTop - document.documentElement.clientHeight;
+// let height = main2;
+topBtn.classList.remove("show_top_btn");
+addEventListener("scroll", () => {
+  if (scrollY >= height) {
+    topBtn.classList.add("show_top_btn");
+  } else if (scrollY < height) {
+    topBtn.classList.remove("show_top_btn");
+  }
+});
+
 // contact popup
 const contactButton = document.querySelector("#contact-button");
 const contactPopup = document.querySelector(".contact_popup");

@@ -21,7 +21,7 @@ const circleBefore = document.querySelector(".circle::before");
 const aTag = document.querySelectorAll("a");
 
 // project period line
-const periodLine = document.querySelector(".period_line");
+const periodLine = document.querySelectorAll(".period_line");
 
 // project header arrow
 const projectArrow = document.querySelectorAll(".project_arrow");
@@ -82,12 +82,14 @@ dark.addEventListener("click", () => {
     //top btn color change
     topBtnSrc.src = "./images/Wtop_btn.svg";
 
-    // project period line color change
-    periodLine.classList.add("WLine");
-
     //project arrow color change
     projectArrow.forEach((item) => {
       item.src = "./images/Warrow.svg";
+    });
+
+    // project period line color change
+    periodLine.forEach((item) => {
+      item.classList.add("WLine");
     });
   });
 });
@@ -121,12 +123,14 @@ light.addEventListener("click", (e) => {
   //top btn color change
   topBtnSrc.src = "./images/top_btn.svg";
 
-  // project period line color change
-  periodLine.classList.remove("WLine");
-
   //project arrow color change
   projectArrow.forEach((item) => {
     item.src = "./images/arrow.svg";
+  });
+
+  // project period line color change
+  periodLine.forEach((item) => {
+    item.classList.remove("WLine");
   });
 });
 
