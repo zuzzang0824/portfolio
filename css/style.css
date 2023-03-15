@@ -407,6 +407,7 @@ main .main4 .project_box:nth-child(3) .project_box_header p {
 /* 펫 살롱 */
 main .main4 .project_box:nth-child(4) .project_box_bottom .project_box_right {
   background-image: url(../images/pet_salon.png);
+  display: block;
 }
 main .main4 .project_box:nth-child(4) .project_box_header p {
   margin-left: 12rem;
