@@ -1,0 +1,128 @@
+/* common ~ 형재 + 근접형재 */ #header::after {content:""; clear:both;
+display:block;} #header {position:fixed; background:#fff; width: 100%; top:0px;
+z-index:9 ; border-bottom:1px solid #000;} #header .header_wrap { width:
+calc(100% - 60px); top: 0px; padding: 0 30px;} /* toplogo */ #header
+.header_wrap::after {content:""; clear:both; display:block;} #header.logoleft
+.header_wrap .logo_area { display: inline-block; float: left; width:7%;
+min-width: 170px;} #header.logoleft .header_wrap .logo_area >
+.xans-layout-logotop { display: table; height: 35px; } #header.logoleft
+.header_wrap .logo_area > .xans-layout-logotop a { font-size:11px; line-height:
+40px; display: block; vertical-align: middle; display: table-cell;}
+#header.logoleft .header_wrap .logo_area > .xans-layout-logotop img {display:
+block; max-width: 100%; max-height: 18px; vertical-align: middle; } /* user
+control */ #header .header_wrap .gnb .artcate .d1-wrap .d1 > a, #header
+.header_wrap .account_area > ul li a {font-size:11px; line-height:40px;
+display:block;} /* gnb */ #header .header_wrap .gnb { display:inline-block;
+float:left; width: 50%; box-sizing: border-box; } #header .header_wrap .gnb
+.artcate .back_bg {transition: height .3s;} #header .header_wrap .gnb .artcate
+.d1-wrap:after{display:block;content:''; clear:both} #header .header_wrap .gnb
+.artcate .d1-wrap {font-size:0; letter-spacing:0;} #header .header_wrap .gnb
+.artcate .d1-wrap .d1 { display:inline-block; } #header .header_wrap .gnb
+.artcate .d1-wrap .d1 > a.current_page::after {content:""; clear:both;
+display:block; position:absolute; left: calc(50% - 10px); transform:
+translateX(-50%); bottom:13px;width:2px; height:2px; background-color:#000;
+border-radius:10px;} #header .header_wrap .gnb .artcate .d1-wrap .d1 > a {
+position:relative; font-size: 11px; padding: 0 25px 0 0; height: 35px;
+line-height: 35px; } #header .header_wrap .gnb .artcate .d1-wrap .d1 > a:hover,
+#header .header_wrap .gnb .artcate .d1-wrap .d1.on > a {color:#000} #header
+.header_wrap .gnb .artcate .d1-wrap .d1.prd .d2-wrap {position:absolute;left:0;
+right: 0; display:none;background:#fff;;border:0;white-space: nowrap; } #header
+.header_wrap .gnb .artcate .d2-wrap {position:absolute; box-sizing:border-box;
+display:none; white-space: nowrap; padding: 5px 0 15px; } #header .header_wrap
+.gnb .artcate .d2-wrap > ul {display:inline-block; padding:0;margin:0;border:0}
+#header .header_wrap .gnb .artcate .d2-wrap > ul li:last-child
+{position:relative; display:inline-block; vertical-align:top; padding: 0px 0% 0
+0;} #header .header_wrap .gnb .artcate .d2-wrap .col { display: inline-block;
+vertical-align:top;} #header .header_wrap .gnb .artcate .d2-wrap .d2
+{position:relative; display:block; vertical-align:top; padding: 0px 40px 0 0;}
+#header .header_wrap .gnb .artcate .d2-wrap .d2 ul.cowd li.fowd > a {} #header
+.header_wrap .gnb .artcate .d2-wrap .d2.fowd {position:relative;
+display:inline-block; vertical-align:top; padding: 0px 40px 0 0;} #header
+.header_wrap .gnb .artcate .d2-wrap .d2 > a
+{font-size:11px;color:#000;line-height:18px;padding:0 10px 0 0} #header
+.header_wrap .gnb .artcate .d1-wrap .d2:hover > a {color:#000} #header
+.header_wrap .gnb .artcate .d2-wrap .img
+{position:relative;display:inline-block;background:#fff;vertical-align:top;
+float:right; text-align:left; width: 40%; font-size:0; letter-spacing:0;}
+#header .header_wrap .gnb .artcate .d2-wrap .img a {display:inline-block;
+width:50%; text-align:right; padding-left:10px; box-sizing:border-box; } #header
+.header_wrap .gnb .artcate .d2-wrap .img a img {max-width:100%;
+max-height:100%;} #header .header_wrap .gnb .artcate .d2-wrap .img span
+{display:block; padding:10px 0 0; font-size:11px; text-align:left;} #header
+.header_wrap .gnb .artcate .d3-wrap{ padding:0 0} #header .header_wrap .gnb
+.artcate .d3-wrap .d3{position:relative;} #header .header_wrap .gnb .artcate
+.d3-wrap .d3 > a{font-size:11px; color:#000; line-height:18px;padding:0 10px 0 0
+} #header .header_wrap .gnb .artcate .d3-wrap .d3 > a:hover, #header
+.header_wrap .gnb .artcate .d3-wrap .d3.on > a{color:#000} #header .header_wrap
+.gnb .artcate .d2-wrap
+.d3.be:after{display:block;content:'';position:absolute;right:5px;top:10px;width:4px;height:4px;border-radius:50%;background:#aaa}
+#header .header_wrap .gnb .artcate .d2-wrap .d3.on.be:after{background:#555}
+#header .header_wrap .gnb .artcate
+.d4-wrap{display:none;position:absolute;left:100%;top:-6px;background:#fff;border:1px
+solid #ddd;width:180px;padding:5px 0} #header .header_wrap .gnb .artcate
+.d4-wrap .d4{} #header .header_wrap .gnb .artcate .d4-wrap .d4 >
+a{font-size:11px;color:#666;line-height:24px;padding:0 10px} #header
+.header_wrap .gnb .artcate .d4-wrap .d4 > a:hover, #header .header_wrap .gnb
+.artcate .d4-wrap .d4.on > a{background:#eee} /* account */ #header .header_wrap
+.account_area { position: absolute; right: 30px; } #header .header_wrap
+.account_area > ul li { float:right; display:inline-block;} #header .header_wrap
+.account_area > ul li a { font-size: 11px; padding: 0 0 0 25px; height: 35px;
+line-height: 35px;} #header .header_wrap .account_area > ul li.search a
+{cursor:pointer;} #header .header_wrap .hamber_momenu { display:none; } #header
+.header_wrap .hamber_momenu::after {clear:both; display:block; content:""}
+#header .header_wrap .hamber_momenu li.top_member {float:right;
+display:inline-block; padding-left:15px; height:35px; line-height:35px;} #header
+.header_wrap .hamber_momenu li.top_member a {font-size:11px;} #header
+.header_wrap .hamber_momenu button { float:right; display:inline-block;
+margin-left:18px; width:18px; height:35px; position: relative;} #header
+.header_wrap .hamber_momenu button > span { width:3px; border-radius:50%;
+top:50%; height:3px; background-color:#000; position:absolute; transform:
+translateY(-55%);} #header .header_wrap .hamber_momenu button >
+span:nth-child(1) {left:0; transition: all .5s;} #header .header_wrap
+.hamber_momenu button > span:nth-child(2) {left:40%; transition: width .1s;}
+#header .header_wrap .hamber_momenu button > span:nth-child(3) {right:0;
+transition: all .5s;} #header .header_wrap .hamber_momenu button.xline >
+span:nth-child(1) {top:50%; transform: rotate(360deg); } #header .header_wrap
+.hamber_momenu button.xline > span:nth-child(2) {width:0px; } #header
+.header_wrap .hamber_momenu button.xline > span:nth-child(3) {top:50%;
+transform: rotate(-360deg); } .xline_dim { width:34px; height:32px; position:
+absolute; top:0; right:10px;} .xline_dim > span {width:20px; right: 0;
+height:1px; background-color:#000; position:absolute; } .xline_dim >
+span:nth-child(1) {top:35%; transition: all 2s;} .xline_dim > span:nth-child(2)
+{top:50%; transition: width 2s;} .xline_dim > span:nth-child(3) {top:65%;
+transition: all 2s;} .xline_dim.xline > span:nth-child(1) {top:50%; transform:
+rotate(40deg); transition: all 2s;} .xline_dim.xline > span:nth-child(2)
+{width:0px; transition: all 2s;} .xline_dim.xline > span:nth-child(3) {top:50%;
+transform: rotate(-40deg); transition: all 2s;} /* search */ #header
+#searchBarForm {position:absolute; z-index:3; width:100%; background-color:#fff;
+display:none; border-top: 1px solid #000;} #header #searchBarForm
+.Layout_SearchHeader {padding:12px 30px 0;} #header #searchBarForm
+.Layout_SearchHeader::after {content:""; clear:both; display:block;} #header
+#searchBarForm .Layout_SearchHeader .searchForm { width:50%; float:right;
+max-width: 200px; padding:0px 0 15px; margin:0px 0; text-align: center; }
+#header #searchBarForm .Layout_SearchHeader .searchForm .searchFormWrap
+{position:relative; background:#fff; border:0; border-bottom:1px solid #000;
+margin:0 auto; } #header #searchBarForm .Layout_SearchHeader .searchForm
+.searchFormWrap input {background:#fff; height:20px; border:0; width:100%;
+padding:0 5px;} #header #searchBarForm .Layout_SearchHeader .searchForm button {
+position:absolute; top:0px; right:0px; border:0px; outline:0; color:#000;
+font-size:11px; padding:0px 0 0 0px; line-height:16px; background:#fff} #header
+#searchBarForm .Layout_SearchHeader .searchForm button img { width:50px;}
+#header #searchBarForm .Layout_SearchHeader .hotKeyword { width:50%;
+float:left;} #header #searchBarForm .Layout_SearchHeader .hotKeyword .title {
+display:inline-block; padding:5px 0 0;} #header #searchBarForm
+.Layout_SearchHeader .hotKeyword .keyword {margin-top:10px;} #header
+#searchBarForm .Layout_SearchHeader .hotKeyword .keyword a {margin-right: 10px;}
+#header #searchBarForm .Layout_SearchHeader .hotKeyword .keyword a::after
+{content:", "; clear:both; display:inline-block;margin-right:4px;} #header
+#searchBarForm .Layout_SearchHeader .hotKeyword .keyword a:last-child::after
+{display:none;} /* mobile */ @media all and (max-width : 1000px) { #header
+.header_wrap { padding:0 10px; width: 100%; box-sizing: border-box;}
+#header.logoleft .header_wrap .logo_area > .xans-layout-logotop img {
+max-height: 14px;} #header.logoleft .header_wrap .logo_area {float:left; }
+#header .header_wrap .gnb, #header .header_wrap .account_area {display:none;}
+#header .header_wrap .hamber_momenu {display:block; } #header #searchBarForm
+.Layout_SearchHeader {padding:10px;} #header #searchBarForm .Layout_SearchHeader
+.searchForm { width:100%; float:right; max-width: 400px; padding:0px 0 10px;
+margin:0px 0; text-align: center; } #header #searchBarForm .Layout_SearchHeader
+.hotKeyword { width:100%; float:left;} }
