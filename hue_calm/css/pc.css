@@ -195,6 +195,7 @@ main #product {
   flex-wrap: wrap;
   margin-top: 320px;
   margin-bottom: 160px;
+  align-items: flex-end;
 }
 main #product .product_mobile {
   display: block;
@@ -219,7 +220,7 @@ main #product .product_wrapper:nth-child(4) {
   width: calc(33.33% - 80px);
 }
 main #product .img_height_edit {
-  height: 357.29px;
+  /* height: 357.29px; */
 }
 main #product .view_more_mb {
   display: none;

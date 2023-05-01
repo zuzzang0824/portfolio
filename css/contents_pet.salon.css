@@ -623,7 +623,7 @@ main .main5 p {
 main .main5 .view-container {
   width: 100%;
   height: 45rem;
-  margin-top: 12.5rem;
+  /* margin-top: 12.5rem; */
   display: block;
   margin-bottom: 6.25rem;
   background: url(../pet_salon/view.png) no-repeat 50% / cover;
@@ -663,6 +663,59 @@ main .main5 .view-container:hover p {
 main .main5 .view-container:hover .bg-img {
   background-color: rgba(255, 255, 255, 0.3);
 }
+
+/* 2023.4.30 edit */
+.quickViewBtn {
+  background-color: #ffa536;
+  padding: 5px 15px;
+  max-width: fit-content;
+  white-space: nowrap;
+  font-size: 1.6rem;
+  margin: 0 auto;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.quickViewBtn a {
+  color: #fff;
+}
+.quickViewBtn:hover {
+  background-color: #222;
+}
+.quickViewBtn:hover a {
+  color: #fff;
+}
+
+main .main5 p {
+  margin-top: 2.188rem;
+}
+main .main5 p:last-child {
+  margin-top: 0;
+  width: 70%;
+  font-size: 1.1rem;
+}
+main .main5 .quickViewContainer h2 {
+  font-size: 1.8rem;
+  font-family: "LeferiPoint-BlackA", sans-serif;
+  display: flex;
+  align-items: center;
+}
+main .main5 .quickViewContainer .material-symbols-outlined {
+  font-size: 3rem;
+}
+main .main5 .small_red_text {
+  font-size: 0.5rem;
+  align-self: flex-start;
+  margin-right: 0.5rem;
+  color: #f15a29;
+}
+main .main5 .old_text {
+  color: #bababa;
+}
+main .main5 .quickViewContainer {
+  margin-top: 12.5rem;
+  /* padding-top: 12rem; */
+}
+/* ////////////////////////////////////////// */
 
 @media all and (max-width: 1700px) {
   html {

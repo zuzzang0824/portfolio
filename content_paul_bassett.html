@@ -21,6 +21,11 @@
     />
     <!-- prefix -->
     <link rel="stylesheet" href="./common/prefixfree.min.js" />
+    <!-- 2023.4.30 expand icon -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,0"
+    />
     <!-- css -->
     <link rel="stylesheet" href="./css/contents_paul_bassett.css" />
     <link rel="stylesheet" href="./css/font.css">
@@ -75,6 +80,11 @@
           <li>#모바일</li>
         </ul>
       </div>
+
+      <!-- 2023.4.30 add (quick view button) -->
+<div class="quickViewBtn">
+  <a href="./content_paul_bassett.html#quickView"> View Project </a>
+</div>
 
       <div class="main2">
         <!-- mockup, info, overview -->
@@ -260,7 +270,12 @@
           팀원으로서는 적극적으로 협조하며 작업에 임해 같은 문제가 반복되지 않도록 해야겠다.
         </p>
         <!-- view website -->
-        <a
+        <div class="quickViewContainer" id="quickView">
+          <h2>
+            View Project
+            <span class="material-symbols-outlined"> expand_more </span>
+          </h2>
+          <a
           href="./paul_bassett/paul_bassett.html"
           class="view-container"
           target="_blank"
@@ -268,6 +283,7 @@
         <p>View PDF</p>
           <div class="bg-img"></div>
         </a>
+        </div>
       </div>
     </main>
   </body>

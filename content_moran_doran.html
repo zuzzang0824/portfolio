@@ -21,6 +21,11 @@
     />
     <!-- prefix -->
     <link rel="stylesheet" href="./common/prefixfree.min.js" />
+    <!-- 2023.4.30 expand icon -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,0"
+    />
     <!-- css -->
     <link rel="stylesheet" href="./css/contents_moran_doran.css" />
     <link rel="stylesheet" href="./css/font.css" />
@@ -80,11 +85,16 @@
         </ul>
       </div>
 
+      <!-- 2023.4.30 add (quick view button) -->
+      <div class="quickViewBtn">
+        <a href="./content_moran_doran.html#quickView"> View Project </a>
+      </div>
+
       <div class="main2">
         <!-- mockup, info, overview -->
         <div class="mockup">
-          <img src="./pet_salon/home.png" alt="1" />
-          <img src="./pet_salon/sub.png" alt="2" />
+          <img src="./moran_doran/view_panel.png" alt="1" />
+          <img src="./moran_doran/view_project.png" alt="2" />
         </div>
 
         <div class="main2-flex-container">
@@ -133,24 +143,36 @@
 
       <div class="main5">
         <!-- view project -->
-        <a
+        
+        <div class="quickViewContainer" id="quickView">
+          <h2>
+            View Project
+            <span class="material-symbols-outlined"> expand_more </span>
+          </h2>
+          <a
           href="./moran_doran/moran_doran.html"
-          class="view-container"
+          class="view-container1 view-container"
           target="_blank"
         >
           <p>View Project</p>
           <div class="bg-img"></div>
         </a>
+        
         <!-- view panel -->
+        <h2>
+          View Panel
+          <span class="material-symbols-outlined"> expand_more </span>
+        </h2>
         <a
           href="./moran_doran/moroan_doran_panel.html"
-          class="view-container"
+          class="view-container2 view-container"
           target="_blank"
         >
           <p>View Panel</p>
           <div class="bg-img"></div>
         </a>
       </div>
+    </div>
     </main>
     <body>
 </html>

@@ -274,7 +274,6 @@ main .main3 {
 }
 .main3 strong {
   background-color: unset;
-  text-decoration: underline;
 }
 .backBOX {
   position: absolute;
@@ -623,22 +622,20 @@ main .main5 p {
 main .main5 .view-container {
   width: 100%;
   height: 45rem;
-  margin-top: 12.5rem;
+  /* margin-top: 12.5rem; */
   display: block;
   margin-bottom: 6.25rem;
-  background: url(../moran_doran/view_project.png) no-repeat 50% / cover;
   position: relative;
 }
-main .main5 .view-container:last-child {
+main .main5 .view-container1 {
+  background: url(../moran_doran/view_project.png) no-repeat 50% / cover;
+}
+main .main5 .view-container2 {
   background: url(../moran_doran/view_panel.png) no-repeat 50% / cover;
 }
-
-main .main5 .view-container:last-child p {
-  color: #fff;
-}
 main .main5 .view-container p {
+  color: #fff;
   font-size: 1.625rem;
-  color: #d55958;
   font-family: "LeferiPoint-BlackA", sans-serif;
   /* display: grid;
   align-items: center;
@@ -671,6 +668,50 @@ main .main5 .view-container:hover p {
 main .main5 .view-container:hover .bg-img {
   background-color: rgba(255, 255, 255, 0.3);
 }
+
+/* 2023.4.30 edit */
+.quickViewBtn {
+  background-color: #e25a5a;
+  padding: 5px 15px;
+  max-width: fit-content;
+  white-space: nowrap;
+  font-size: 1.6rem;
+  margin: 0 auto;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+.quickViewBtn a {
+  color: #fff;
+}
+.quickViewBtn:hover {
+  background-color: #222;
+}
+.quickViewBtn:hover a {
+  color: #fff;
+}
+
+main .main5 p {
+  margin-top: 2.188rem;
+}
+main .main5 p:last-child {
+  margin-top: 0;
+  width: 70%;
+  font-size: 1.1rem;
+}
+main .main5 .quickViewContainer h2 {
+  font-size: 1.8rem;
+  font-family: "LeferiPoint-BlackA", sans-serif;
+  display: flex;
+  align-items: center;
+}
+main .main5 .quickViewContainer span {
+  font-size: 3rem;
+}
+main .main5 .quickViewContainer {
+  margin-top: 12.5rem;
+  /* padding-top: 12rem; */
+}
+/* ////////////////////////////////////////// */
 
 @media all and (max-width: 1700px) {
   html {
