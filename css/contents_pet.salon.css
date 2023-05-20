@@ -693,6 +693,9 @@ main .main5 p:last-child {
   width: 70%;
   font-size: 1.1rem;
 }
+main .main5 h2 {
+  position: relative;
+}
 main .main5 .quickViewContainer h2 {
   font-size: 1.8rem;
   font-family: "LeferiPoint-BlackA", sans-serif;
@@ -702,16 +705,20 @@ main .main5 .quickViewContainer h2 {
 main .main5 .quickViewContainer .material-symbols-outlined {
   font-size: 3rem;
 }
-main .main5 .small_red_text {
-  font-size: 0.5rem;
-  align-self: flex-start;
-  margin-right: 0.5rem;
+main .main5 .quickViewContainer > h2::before {
+  content: "NEW";
+  position: absolute;
+  top: -0.8rem;
   color: #f15a29;
+  font-weight: bold;
+  font-family: "LeferiPoint-BlackA", sans-serif;
+  font-size: 0.8rem;
 }
-main .main5 .old_text {
-  color: #bababa;
+main .main5 .quickViewContainer .old::before {
+  content: "OLD";
+  color: #707070;
 }
-main .main5 .quickViewContainer {
+h2 main .main5 .quickViewContainer {
   margin-top: 12.5rem;
   /* padding-top: 12rem; */
 }
