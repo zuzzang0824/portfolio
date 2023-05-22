@@ -628,10 +628,10 @@ main .main5 .view-container {
   position: relative;
 }
 main .main5 .view-container1 {
-  background: url(../moran_doran/view_project.png) no-repeat 50% / cover;
+  background: url(../moran_doran/view_project.png) no-repeat 0% 100% / cover;
 }
 main .main5 .view-container2 {
-  background: url(../moran_doran/view_panel.png) no-repeat 50% / cover;
+  background: url(../moran_doran/view_panel.png) no-repeat 0% 100% / cover;
 }
 main .main5 .view-container p {
   color: #fff;
