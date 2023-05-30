@@ -224,16 +224,12 @@ main .main2 .mockup {
 main .main2 .mockup img {
   position: absolute;
 }
-main .main2 .mockup img:nth-child(1) {
-  width: 50%;
-  left: 33%;
+main .main2 .mockup img {
+  width: 100%;
+  max-width: none;
+  left: 50%;
   top: 40%;
   transform: translate(-50%, -50%);
-}
-main .main2 .mockup img:nth-child(2) {
-  width: 50%;
-  bottom: -35%;
-  right: 8%;
 }
 main .main2 h2 {
   font-size: 2.5rem;
@@ -279,20 +275,20 @@ main .main3 {
 .backBOX {
   position: absolute;
   left: 0;
-  top: 316.6%;
+  top: 310%;
   width: 100%;
-  height: 88.6rem;
-  background-color: rgba(238, 233, 229, 0.35);
+  height: 63rem;
+  background-color: #e5e5e53a;
   z-index: -9;
 }
 @media all and (min-width: 1530px) {
   .backBOX {
     position: absolute;
     left: 0;
-    top: 316%;
+    top: 285%;
     width: 100%;
-    height: 87.5rem;
-    background-color: rgba(238, 233, 229, 0.35);
+    height: 61rem;
+    background-color: #e5e5e53a;
     z-index: -9;
   }
 }
@@ -350,15 +346,47 @@ main .main3 .main3-box1 .keyword_box h2 {
 main .main3 .main3-box1 .keyword_flex_box {
   display: flex;
 }
-main .main3 .main3-box1 .keyword {
-  min-width: 240px;
-  height: 90px;
-  border-radius: 45px;
+.keyword {
+  min-width: 270px;
+  height: 130px;
+  border-radius: 100px;
   box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.1);
-  background-color: #fff;
-  display: grid;
-  place-content: center;
+  background-color: #222;
+  display: flex;
+  align-items: center;
   margin-right: 2.188rem;
+  justify-content: space-between;
+  color: #fff;
+  position: relative;
+  font-family: "LeferiPoint-BlackA", sans-serif;
+  font-size: 32px;
+  text-align: right;
+  padding-right: 35px;
+}
+main .main3 .main3-box1 .keyword_circle {
+  min-width: 105px;
+  height: 105px;
+  background-color: #fff;
+  border-radius: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 12px;
+  transition: 0.3s;
+}
+
+.btn_move {
+  transform: translateX(140px);
+  transition: 0.3s;
+}
+
+.keyword_bgc {
+  color: #222;
+}
+
+main .main3 .main3-box1 img {
+  width: 3rem;
+  height: 3rem;
 }
 main .main3 .main3-box1 h3 {
   font-size: 3.75rem;
@@ -378,6 +406,7 @@ main .main3 .main3-box1 h3::after {
 }
 main .main3 .main3-box1 .keypoint p {
   line-height: 2;
+  font-size: 20px;
 }
 main .main3 .main3-box1 .asistobe {
   margin-top: 9.375rem;
@@ -422,22 +451,17 @@ main .main4 .main4-flex-container {
   align-items: center;
   justify-content: space-between;
 }
-main .main4 .main4-box1 .logo_box {
-  width: 11.25rem;
-  height: 11.25rem;
-  border-radius: 29px;
-  background-color: #fff;
-  margin-right: 1.875rem;
-}
-main .main4 .main4-box1 .logo_box:first-child {
-  background: url(../paul_bassett/logo1.svg);
-}
-main .main4 .main4-box1 .logo_box:last-child {
-  background: url(../paul_bassett/logo2.svg);
-}
+
 main .main4 .main4-box1 .logo_wrapper {
-  display: flex;
+  display: grid;
+  justify-items: center;
+  justify-content: left;
 }
+
+main .main4 .main4-box1 .logo_wrapper .caption {
+  font-size: 1.8rem;
+}
+
 main .main4 .main4-box1 p:first-child {
   font-size: 1.875rem;
   margin-top: 3.125rem;
@@ -466,28 +490,18 @@ main .main4 .main4-box3 {
   line-height: 1.5;
   margin-top: 9.375rem;
 }
-main .main4 .main4-box3 .icon {
-  margin-bottom: 1rem;
-  margin-right: 1.25rem;
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-}
 main .main4 .main4-box3 .icon img {
-  width: 2.5rem;
+  max-width: none;
 }
-main .main4 .main4-box3 .icon:nth-child(5) img,
-main .main4 .main4-box3 .icon:nth-child(6) img,
-main .main4 .main4-box3 .icon:nth-child(7) img,
-main .main4 .main4-box3 .icon:nth-child(9) img,
-main .main4 .main4-box3 .icon:nth-child(10) img {
-  width: 2rem;
+main .main4 .main4-box3 .icon_wrapper {
+  display: grid;
+  grid-template: repeat(3, 60%) / repeat(7, 3em);
+  justify-items: center;
+  column-gap: 40px;
 }
 
-main .main4 .main4-box3 .icon_wrapper {
-  display: flex;
+main .main4 .main4-box3 .icon_wrapper .icon {
+  /* display: grid; */
 }
 main .main4 .main4-box3 > p:first-child {
   font-size: 1.875rem;
@@ -533,11 +547,11 @@ main
   .main4-box4
   .color-chip-flex-container1
   .color-chip:nth-child(1)::after {
-  content: "#FF0033";
+  content: "#F98404";
   color: #fff;
 }
 main .main4 .main4-box4 .color-box .color-chip:nth-child(2)::after {
-  content: "#333333";
+  content: "#F15A29";
   color: #fff;
 }
 main
@@ -545,7 +559,8 @@ main
   .main4-box4
   .color-chip-flex-container1
   .color-chip:nth-child(3)::after {
-  content: "#E9E9E9";
+  content: "#222222";
+  color: #fff;
 }
 main
   .main4
@@ -560,14 +575,14 @@ main
   .main4-box4
   .color-chip-flex-container2
   .color-chip:nth-child(4)::after {
-  content: "#FFFFFF";
+  content: "#E5E5E5";
 }
 main
   .main4
   .main4-box4
   .color-chip-flex-container2
   .color-chip:nth-child(5)::after {
-  content: "#EEE9E5";
+  content: "#F4F4F4";
 }
 
 main .main4 .main4-box4 .color-chip-flex-container1 .color-chip:nth-child(1) {
@@ -597,7 +612,7 @@ main .main5 .main5-flex-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 12rem;
+  padding-top: 17rem;
 }
 main .main5 .main5-flex-container h2 {
   font-size: 2.5rem;
@@ -617,15 +632,19 @@ main .main5 p {
   text-decoration: none;
   font-size: 1.2rem;
 }
-
 main .main5 .view-container {
   width: 100%;
   height: 35rem;
   /* margin-top: 12.5rem; */
   display: block;
   margin-bottom: 6.25rem;
-  background: url(../pet_salon/view.png) no-repeat 50% / cover;
   position: relative;
+}
+main .main5 .quickViewContainer1 .view-container {
+  background: url(../pet_salon/image/view.png) no-repeat 50% / cover;
+}
+main .main5 .quickViewContainer2 .view-container {
+  background: url(../pet_salon/image/old.png) no-repeat 50% / cover;
 }
 main .main5 .view-container p {
   font-size: 1.625rem;
@@ -644,22 +663,22 @@ main .main5 .view-container p {
   transform: translateY(-50%);
   left: 5%;
   margin: 0;
+  z-index: 9999999999;
 }
 main .main5 .bg-wrapper {
   width: 100%;
   height: 100%;
-}
-main .main5 .view-container:hover p {
-  opacity: 1;
 }
 .bg-img {
   width: 100%;
   height: 100%;
   background-color: none;
   transition: 0.3s;
+  filter: contrast(60%);
+  background-color: rgba(34, 34, 34, 0.464);
 }
 main .main5 .view-container:hover .bg-img {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0);
 }
 
 /* 2023.4.30 edit */
@@ -717,6 +736,7 @@ h2 main .main5 .quickViewContainer {
 .quickViewContainer2 {
   width: 45%;
 }
+
 .main5 .quickViewContainer2 h3 {
   color: #999;
 }
