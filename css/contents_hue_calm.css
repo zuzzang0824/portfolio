@@ -484,14 +484,16 @@ main .main5 .main5-flex-container .title-line {
 /* 2023.4.30 edit */
 .quickViewBtn {
   background-color: #d9d5d1;
-  padding: 5px 15px;
+  padding: 5px 20px;
   max-width: fit-content;
   white-space: nowrap;
   font-size: 1.6rem;
   margin: 0 auto;
-  border-radius: 5px;
+  border-radius: 50px;
   transition: 0.3s;
+  /* animation: ;애니메이션 넣기 */
 }
+
 .quickViewBtn:hover {
   background-color: #222;
 }
